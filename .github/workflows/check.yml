@@ -1,0 +1,35 @@
+name: check
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with: { node-version: 24 }
+      - uses: pnpm/action-setup@b906affcce14559ad1aafd4ab0e942779e9f58b1
+        with: { version: 12.9.0, run_install: false }
+      - run: pnpm install --frozen-lockfile --ignore-scripts
+      - run: pnpm check
+      - run: pnpm test
+      - run: pnpm package
+      - uses: actions/upload-artifact@v4
+        with:
+          name: living-code-television
+          path: dist/*.tar.gz
+          if-no-files-found: error
+  native:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Fetch checksum-pinned Television 0.15.9
+        run: |
+          curl --fail --location --max-time 90 https://github.com/alexpasmantier/television/releases/download/0.15.9/tv-0.15.9-x86_64-unknown-linux-musl.tar.gz -o native.tar.gz
+          echo '3410e34132f4e44fd439c711f08c15b3a21f51630657cb03f248b2c7aef3e29a  native.tar.gz' | sha256sum --check -
+          mkdir native && tar -xzf native.tar.gz -C native
+      - name: Render all four themes in real terminals
+        run: NATIVE_BINARY="$PWD/native/tv-0.15.9-x86_64-unknown-linux-musl/tv" python3 scripts/test-native.py

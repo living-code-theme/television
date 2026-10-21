@@ -1,0 +1,31 @@
+{
+  "repository": "alexpasmantier/television",
+  "revision": "67ddd3046f125cb8229af3de70c5b1e89af0a694",
+  "paths": [
+    "docs/user-guide/05-themes.md",
+    "television/config/themes.rs"
+  ],
+  "checked": "2026-10-21",
+  "contract": "toml",
+  "colors": [
+    "background",
+    "border_fg",
+    "text_fg",
+    "dimmed_text_fg",
+    "input_text_fg",
+    "result_count_fg",
+    "result_name_fg",
+    "result_line_number_fg",
+    "result_value_fg",
+    "selection_bg",
+    "selection_fg",
+    "match_fg",
+    "preview_title_fg",
+    "channel_mode_fg",
+    "channel_mode_bg",
+    "remote_control_mode_fg",
+    "remote_control_mode_bg",
+    "action_picker_mode_fg",
+    "action_picker_mode_bg"
+  ]
+}

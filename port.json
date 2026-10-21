@@ -1,0 +1,28 @@
+{
+  "$schema": "https://living-code.dev/port.schema.json",
+  "schemaVersion": 1,
+  "name": "Television",
+  "slug": "television",
+  "group": "CLI & TUI",
+  "emoji": "📺",
+  "description": "Living Code for Television: complete native TOML palettes for search results, matches, previews, selections and mode indicators.",
+  "homepage": "https://github.com/alexpasmantier/television",
+  "quick": "Install the native theme files",
+  "aliases": [
+    "tv",
+    "fuzzy finder"
+  ],
+  "flavors": [
+    "night",
+    "frost",
+    "paper",
+    "signal"
+  ],
+  "files": [
+    "themes/living-code-night.toml",
+    "themes/living-code-frost.toml",
+    "themes/living-code-paper.toml",
+    "themes/living-code-signal.toml"
+  ],
+  "images": []
+}
