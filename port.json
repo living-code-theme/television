@@ -24,5 +24,10 @@
     "themes/living-code-paper.toml",
     "themes/living-code-signal.toml"
   ],
-  "images": []
+  "images": [
+    { "flavor": "night", "path": "images/night.png", "alt": "Television running Living Code Night" },
+    { "flavor": "frost", "path": "images/frost.png", "alt": "Television running Living Code Frost" },
+    { "flavor": "paper", "path": "images/paper.png", "alt": "Television running Living Code Paper" },
+    { "flavor": "signal", "path": "images/signal.png", "alt": "Television running Living Code Signal" }
+  ]
 }

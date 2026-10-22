@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 1,
+  "scene": "Television native file search in the tiny project fixture.",
+  "versionCommand": [
+    "tv",
+    "--version"
+  ],
+  "fixtures": []
+}

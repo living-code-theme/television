@@ -7,28 +7,46 @@
 
 ## Previews
 
-Real application screenshots have not been captured yet.
+<table data-lc-flavors>
+<tr>
+<td width="50%" valign="top">
+<strong>Night</strong><br><sub>Dark · full palette</sub><br><br>
+<a href="images/night.png"><img src="images/night.png" alt="Television running Living Code Night" width="640"></a>
+</td>
+<td width="50%" valign="top">
+<strong>Frost</strong><br><sub>Dark · softer chroma</sub><br><br>
+<a href="images/frost.png"><img src="images/frost.png" alt="Television running Living Code Frost" width="640"></a>
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+<strong>Paper</strong><br><sub>Light · near-white slate</sub><br><br>
+<a href="images/paper.png"><img src="images/paper.png" alt="Television running Living Code Paper" width="640"></a>
+</td>
+<td width="50%" valign="top">
+<strong>Signal</strong><br><sub>Dark · teal accent</sub><br><br>
+<a href="images/signal.png"><img src="images/signal.png" alt="Television running Living Code Signal" width="640"></a>
+</td>
+</tr>
+</table>
+
+Select any preview to view the image at full size.
 
 ## Installation
 
 ```sh
-git clone https://github.com/living-code-theme/television.git
-cd television
+flavor=night # night, frost, paper, or signal
+curl -fsSL --create-dirs -o "${XDG_CONFIG_HOME:-$HOME/.config}/television/themes/living-code-$flavor.toml" "https://raw.githubusercontent.com/living-code-theme/television/main/themes/living-code-$flavor.toml"
 ```
 
-```sh
-mkdir -p "${XDG_CONFIG_HOME:-$HOME/.config}/television/themes"
-cp themes/*.toml "${XDG_CONFIG_HOME:-$HOME/.config}/television/themes/"
-```
-
-Merge this into the existing `config.toml` in your Television config directory:
+Set the downloaded filename stem in the existing `[ui]` table of Television’s `config.toml`:
 
 ```toml
 [ui]
 theme = "living-code-night"
 ```
 
-Restart `tv`. If you configured a different config directory, put `themes/` beside that `config.toml`.
+Restart `tv`. Preserve other config settings; if you use a different Television config directory, put `themes/` beside that `config.toml`.
 
 ## Flavors
 
@@ -37,7 +55,7 @@ Expand a flavor for its full-size preview and activation instructions.
 <details data-lc-flavor="night">
 <summary><strong>Night</strong> · Dark · full palette</summary>
 
-A real application capture is not available yet.
+<p><a href="images/night.png"><img src="images/night.png" alt="Television running Living Code Night" width="1280"></a></p>
 
 Set `theme = "living-code-night"` in the existing `[ui]` table and restart `tv`.
 
@@ -46,7 +64,7 @@ Set `theme = "living-code-night"` in the existing `[ui]` table and restart `tv`.
 <details data-lc-flavor="frost">
 <summary><strong>Frost</strong> · Dark · softer chroma</summary>
 
-A real application capture is not available yet.
+<p><a href="images/frost.png"><img src="images/frost.png" alt="Television running Living Code Frost" width="1280"></a></p>
 
 Set `theme = "living-code-frost"` in the existing `[ui]` table and restart `tv`.
 
@@ -55,7 +73,7 @@ Set `theme = "living-code-frost"` in the existing `[ui]` table and restart `tv`.
 <details data-lc-flavor="paper">
 <summary><strong>Paper</strong> · Light · near-white slate</summary>
 
-A real application capture is not available yet.
+<p><a href="images/paper.png"><img src="images/paper.png" alt="Television running Living Code Paper" width="1280"></a></p>
 
 Set `theme = "living-code-paper"` in the existing `[ui]` table and restart `tv`.
 
@@ -64,7 +82,7 @@ Set `theme = "living-code-paper"` in the existing `[ui]` table and restart `tv`.
 <details data-lc-flavor="signal">
 <summary><strong>Signal</strong> · Dark · teal accent</summary>
 
-A real application capture is not available yet.
+<p><a href="images/signal.png"><img src="images/signal.png" alt="Television running Living Code Signal" width="1280"></a></p>
 
 Set `theme = "living-code-signal"` in the existing `[ui]` table and restart `tv`.
 
@@ -77,6 +95,8 @@ A theme file has flat color keys; `[ui]` belongs only in `config.toml`. Existing
 ## Compatibility
 
 Targets Television’s documented flat TOML custom-theme API and all required fields in its `Theme` struct. The `send_to_channel_mode_fg` fallback in newer documentation is not needed by the pinned contract. Truecolor is recommended. Tests check the full required field set, native parsing, semantic colors and selected-row contrast.
+
+Previews are captured programmatically from the actual application in an isolated profile. See [`capture/app.py`](capture/app.py) for the app-owned recipe and [`images/capture.json`](images/capture.json) for runtime, palette and image provenance. No mock interface is drawn.
 
 ## Contributing
 

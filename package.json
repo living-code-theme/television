@@ -20,8 +20,10 @@
   },
   "scripts": {
     "build": "node scripts/generate.mjs",
-    "check": "node scripts/check.mjs",
+    "check": "node scripts/check.mjs && python3 scripts/capture.py --check",
     "test": "node scripts/check.mjs && node --test test/*.test.mjs",
+    "screenshots": "nix develop path:./capture --command python3 scripts/capture.py",
+    "screenshots:check": "python3 scripts/capture.py --check",
     "test:native": "python3 scripts/test-native.py",
     "check:generated": "node scripts/generate.mjs --check",
     "palette:update": "node scripts/update-palette.mjs",

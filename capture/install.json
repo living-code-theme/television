@@ -1,0 +1,8 @@
+{
+  "downloads": [
+    {
+      "source": "themes/living-code-{flavor}.toml",
+      "destination": "{config}/television/themes/living-code-{flavor}.toml"
+    }
+  ]
+}
