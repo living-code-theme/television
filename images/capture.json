@@ -8,7 +8,7 @@
     "capture/flake.nix": "b2c4cea8515cc826b2cf4e30aafd5700a50a112190ff61ab07a9d620008f8f1c",
     "palette/theme.json": "d735cf005e3b2807953226c0119e384f6f8a3d2b3167443371cb302a8c689cdb",
     "port.json": "6eebe869eb084b611cf76cd1dbb78b9296e340ac1e7dd60e7d8b97eea7c764f3",
-    "scripts/capture.py": "dcb8dc5d8a6ecbf2eb998eab90d678c745c9de6e9d35ded82edc0a949cb7e4e8",
+    "scripts/capture.py": "1fefb763f00567b795b92388b29e3e8c3fd58bd0eefa9c2f31e43663cad7a308",
     "themes/living-code-frost.toml": "a7bf5821907c1604f11d1b6eb1d02be378eaa09fc6bf3e159bae04e39c9425b3",
     "themes/living-code-night.toml": "570df1968c6e87622636b52a4107a65ccc44a3ef381ae8fec8b76ba4754bff09",
     "themes/living-code-paper.toml": "93ff6476fa59920be2100da32c0e1c763d6ea4823186cee75f490c978eee4272",
@@ -17,7 +17,7 @@
   "images": {
     "night": {
       "path": "images/night.png",
-      "sha256": "06cceddd49969e5e41462e27257f75b308925a78de851472cfc4844a66bcde1d",
+      "sha256": "3e40aab08a1434aabb9052959e7685fc1b29229bec9a9dbc3c07d4e429694989",
       "application": "television 0.15.9",
       "paletteColors": [
         "#00a692",
@@ -31,7 +31,7 @@
     },
     "frost": {
       "path": "images/frost.png",
-      "sha256": "e14e53090003f7daf4b3966046a2ce7110d647f8ce8b21d8506e2d06b82d2ce3",
+      "sha256": "010f6e5fb3648d977dace6a451384b7620717d478b3978e7c30b19cd7b9a3970",
       "application": "television 0.15.9",
       "paletteColors": [
         "#0a1016",
@@ -45,7 +45,7 @@
     },
     "paper": {
       "path": "images/paper.png",
-      "sha256": "0cfe45f93bfb71b1e7a371ff5fa432a8039aa7cc9b09946cdb42df99113781d2",
+      "sha256": "f57f3f3987a3ddf0ad89d31ec5ce5b031ae0cd75926641704a8ff2c3087fd338",
       "application": "television 0.15.9",
       "paletteColors": [
         "#12171a",
@@ -60,7 +60,7 @@
     },
     "signal": {
       "path": "images/signal.png",
-      "sha256": "06cceddd49969e5e41462e27257f75b308925a78de851472cfc4844a66bcde1d",
+      "sha256": "3e40aab08a1434aabb9052959e7685fc1b29229bec9a9dbc3c07d4e429694989",
       "application": "television 0.15.9",
       "paletteColors": [
         "#00a692",
